@@ -1,0 +1,19 @@
+#Clone the repositry
+git clone https://github.com/ucsclabs/is1101-YOUR-NAME.git
+
+#Merge the assignment repo to your one
+git pull https://github.com/ucsclabs/is1101.git
+
+#Merge with your master
+git pull
+
+#Add a new file
+git add filename
+
+#Commit your channges
+git commit -a
+
+#Push the changes to git
+#git push
+
+

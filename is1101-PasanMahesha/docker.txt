@@ -1,0 +1,22 @@
+# Build a Docker image
+docker build -t gcc .
+
+# Run Docker image call gcc and name it as gcc
+docker run --name gcc -it gcc
+docker run -v ~/UCSC/BSC/IS1101:/home --name gcc -it gcc
+
+#login to running docker container
+docker exec -it gcc bash
+
+#Start docker for gdb
+docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -v ~/UCSC/BSC/IS1101:/home --name gcc -it gcc
+
+# Start the gcc Docker image
+docker start -ai gcc
+
+#remove all dockers
+docker rm -f $(docker ps -a -q)
+
+#remove all docker images
+docker rmi -f $(docker images -a -q)
+
